@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { ServicesService } from '../services/services.service';
+import { Component, OnInit } from "@angular/core";
+import { ServicesService } from "../services/services.service";
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css'],
+  selector: "app-list",
+  templateUrl: "./list.component.html",
+  styleUrls: ["./list.component.css"],
 })
 export class ListComponent implements OnInit {
   data: any;
@@ -14,11 +14,11 @@ export class ListComponent implements OnInit {
 
   getContinentsSearch(name: any) {
     const keyword = name.target.value;
-    // const search = this.dataServices
-    //   .getSearch(keyword)
-    //   .then((response: any) => {
-    //     this.data = response;
-    //     console.log(this.data);
-    //   });
+    const search = this.dataServices
+      .getSearch(keyword)
+      .then((response: any) => {
+        this.data = response;
+        console.log(this.data);
+      });
   }
 }

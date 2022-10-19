@@ -4,6 +4,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const httOptions = {
   headers: new HttpHeaders({
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET,POST,PATCH,DELETE,PUT,OPTIONS',
+    'Access-Control-Allow-Headers':
+      'Origin, Content-Type, X-Auth-Token, content-type',
     'Content-Type': 'application/json',
   }),
 };
